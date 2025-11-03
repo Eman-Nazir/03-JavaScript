@@ -1,0 +1,185 @@
+
+// 1. BASIC DEBOUNCE
+
+
+// Debounce waits until user stops calling the function for a given delay
+// It ignores all intermediate calls and only runs once at the end
+
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+}
+
+function logSearch(query) {
+  console.log("Searching for:", query, "at", new Date().toLocaleTimeString());
+}
+
+const debouncedSearch = debounce(logSearch, 2000);
+
+debouncedSearch("H");
+setTimeout(() => debouncedSearch("He"), 500);
+setTimeout(() => debouncedSearch("Hel"), 1000);
+setTimeout(() => debouncedSearch("Hell"), 1500);
+setTimeout(() => debouncedSearch("Hello"), 2500);
+
+// This will only log the last one ("Hello") after 2 seconds of no typing
+
+
+
+
+// 2. LEADING DEBOUNCE
+
+
+// Leading debounce runs immediately on the first call
+// Then ignores all calls within the delay period
+// Good for instant response on first interaction
+
+function debounceLeading(fn, delay) {
+  let timer;
+  return function (...args) {
+    const callNow = !timer; // only true on first call
+    clearTimeout(timer);
+    timer = setTimeout(() => (timer = null), delay); // reset timer after delay
+    if (callNow) fn(...args); // run immediately once
+  };
+}
+
+function logTyping(text) {
+  console.log("Typing started:", text, "at", new Date().toLocaleTimeString());
+}
+
+const debouncedTyping = debounceLeading(logTyping, 2000);
+
+debouncedTyping("H");
+setTimeout(() => debouncedTyping("He"), 500);
+setTimeout(() => debouncedTyping("Hel"), 1000);
+setTimeout(() => debouncedTyping("Hell"), 1500);
+setTimeout(() => debouncedTyping("Hello"), 2500);
+
+// Only first call will run immediately ("H"), then again after 2 seconds pause
+
+
+
+
+// 3. TRAILING THROTTLING
+
+
+// Throttling ensures the function runs only once per delay period
+// Trailing throttle runs the last call after the delay if multiple come in quickly
+
+function throttleTrailing(fn, delay) {
+  let timerId;
+  let lastArgs;
+  return function (...args) {
+    lastArgs = args;
+    if (!timerId) {
+      timerId = setTimeout(() => {
+        fn(...lastArgs); // run with last arguments after delay
+        timerId = null;
+      }, delay);
+    }
+  };
+}
+
+function logScroll() {
+  console.log("Trailing throttle scroll:", new Date().toLocaleTimeString());
+}
+
+const throttledScroll = throttleTrailing(logScroll, 2000);
+
+throttledScroll();
+throttledScroll();
+throttledScroll();
+
+// Only one will log after 2 seconds (the last one)
+
+
+
+
+// 4. LEADING THROTTLING
+
+
+// Leading throttle runs immediately on the first call
+// Then ignores all new calls until the delay has passed
+
+function throttle(fn, delay) {
+  let lastCall = 0;
+  return function (...args) {
+    const now = Date.now();
+    if (now - lastCall < delay) return; // ignore calls within delay
+    lastCall = now;
+    fn(...args); // run immediately
+  };
+}
+
+function logMessage(msg) {
+  console.log("Message:", msg, "at", new Date().toLocaleTimeString());
+}
+
+const throttledLog = throttle(logMessage, 2000);
+
+throttledLog("Hi");
+setTimeout(() => throttledLog("Hello"), 500);
+setTimeout(() => throttledLog("How are you?"), 1000);
+setTimeout(() => throttledLog("After 2s again!"), 2100);
+setTimeout(() => throttledLog("After 4s again!"), 4200);
+
+// First message runs immediately ("Hi")
+// Next calls within 2 seconds are ignored
+// Then runs again after 2 seconds
+
+
+
+
+// 5. TRAILING DEBOUNCE
+
+
+// This is just normal debounce (same as first example)
+// It waits until there is no new call, then runs the last one
+// It runs after the delay ends, not at the start
+
+function debounceTrailing(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+}
+
+const logInput = debounceTrailing((text) => {
+  console.log("Trailing debounce input:", text, "at", new Date().toLocaleTimeString());
+}, 1500);
+
+logInput("User typing H");
+setTimeout(() => logInput("User typing He"), 500);
+setTimeout(() => logInput("User typing Hel"), 1000);
+setTimeout(() => logInput("User typing Hello"), 2500);
+
+
+
+
+
+// It will only run once after user stops typing for 1.5 seconds
+
+// 6. DIFFERENCE BETWEEN LEADING AND TRAILING
+
+
+// Leading debounce or throttle -> runs at the start immediately
+// Trailing debounce or throttle -> runs at the end after delay
+
+// Example summary:
+
+// Leading Debounce: Runs first, waits for delay, ignores rest until time passes
+// Trailing Debounce: Waits until activity stops, runs only once after delay
+
+// Leading Throttle: Runs immediately, ignores next calls during delay
+// Trailing Throttle: Runs last call after delay, waits before next run
+
+// In short:
+// Debounce -> waits for quiet time
+// Throttle -> limits call frequency
+// Leading -> runs first
+// Trailing -> runs last

@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+ 
+
+    <div class="first">First Element</div>
+    <div class="second">Second Element</div>
+
+    <button id="custom-check" class="check-base-styles">Programming</button>
+  </body>
+
+  <script src="./app.js"></script>
+ 
+
+ 
+<!-- BOX TASK WITH DOM Traversing  -->
+
+
+ 
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple DOM Traversing Task</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .box-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid blue;
+      cursor: pointer;
+    }
+    .selected {
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click a Box to Highlight and Traverse</h1>
+  <div class="box-container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+  <script>
+    const boxes = document.querySelectorAll('.box');
+
+    boxes.forEach(box => {
+      box.addEventListener('click', function () {
+        // Remove previous selection
+        boxes.forEach(box => box.classList.remove('selected'));
+
+        // Highlight the selected box
+        box.classList.add('selected');
+
+        // DOM Traversing
+        console.log('Selected Box Text:', box.textContent);
+        console.log('Next Sibling:', box.nextElementSibling?.textContent || 'None');
+        console.log('Previous Sibling:', box.previousElementSibling?.textContent || 'None');
+        console.log('Parent Node:', box.parentNode.nodeName);
+        console.log('Children of Parent:', box.parentNode.children.length);
+      });
+    });
+  </script>
+</body>
+</html> -->

@@ -1,0 +1,71 @@
+const button = document.getElementById("button");
+const main = document.getElementById("main");
+const picker = document.getElementById("picker");
+picker.style.display = "none";
+
+const HEX = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+const generateRandomHex = function () {
+  return Math.floor(Math.random() * 16);
+};
+
+let color = "";
+button.addEventListener("click", function () {
+  let hexColor = "#";
+  for (let i = 0; i < 6; i++) {
+    hexColor += HEX[generateRandomHex()];
+  }
+  main.style.backgroundColor = hexColor;
+  picker.innerText = hexColor
+  // console.log(hexColor);
+  picker.innerText = hexColor;
+  color = hexColor;
+  picker.style.display = "block";
+});
+
+picker.addEventListener("click", function () {
+  window.navigator.clipboard.writeText(color);
+  alert("Color copied to clipboard")
+  picker.style.display = "none";
+});
+
+// console.log(Math.random() * 10);
+@@ -24,3 +34,9 @@ button.addEventListener("click", function () {
+// console.log(Math.floor(0.92335434 * 10));
+// console.log(Math.ceil(0.92335434 * 10));
+// console.log(Math.round(0.93 * 10));
+
+console.log(window.navigator.clipboard);
+
+// alert
+// confirm
+// prompt
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+@@ -24,3 +24,12 @@ button {
+  cursor: pointer;
+  font-size: larger;
+}
+
+span#picker {
+  padding: 1rem 2rem;
+  font-size: large;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px black;
+  background-color: azure;
+  cursor: pointer;
+}

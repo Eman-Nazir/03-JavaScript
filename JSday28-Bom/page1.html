@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 1</title>
+  <style>
+    body {
+      text-align: center;
+      background: #dff9fb;
+      font-family: sans-serif;
+      padding: 50px;
+    }
+    button {
+      padding: 10px 15px;
+      background: #130f40;
+      color: white;
+      border: none;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      background: white;
+      border-radius: 5px;
+      max-width: 500px;
+      margin-inline: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 BOM Page 1</h1>
+
+  <button onclick="showLocation()">Show Location Info</button>
+  <button onclick="showScreen()">Show Screen Info</button>
+  <button onclick="showBrowser()">Show Browser Info</button>
+  <button onclick="askName()">Prompt</button>
+  <button onclick="askConfirm()">Confirm</button>
+  <button onclick="startClock()">Start Clock</button>
+  <button onclick="stopClock()">Stop Clock</button>
+  <br><br>
+  <a href="page2.html"><button>Go to Page 2 ➡️</button></a>
+  <button onclick="history.forward()">➡️ Go Forward</button>
+
+  <div id="output">Click a button to see BOM info here...</div>
+
+  <script>
+    const output = document.getElementById('output');
+    let clockInterval;
+
+    function showLocation() {
+      output.innerText = `URL: ${location.href}\nPath: ${location.pathname}`;
+    }
+
+    function showScreen() {
+      output.innerText = `Screen Width: ${screen.width}\nScreen Height: ${screen.height}`;
+    }
+
+    function showBrowser() {
+      output.innerText = `User Agent: ${navigator.userAgent}`;
+    }
+
+    function askName() {
+      const name = prompt("What is your name?");
+      output.innerText = name ? `Hello, ${name}!` : "You didn’t enter your name.";
+    }
+
+    function askConfirm() {
+      const response = confirm("Do you like this BOM demo?");
+      output.innerText = response ? "Great!" : "Maybe next time!";
+    }
+
+    function startClock() {
+      if (clockInterval) return;
+      clockInterval = setInterval(() => {
+        output.innerText = "Time: " + new Date().toLocaleTimeString();
+      }, 1000);
+    }
+
+    function stopClock() {
+      clearInterval(clockInterval);
+      clockInterval = null;
+      output.innerText = "Clock stopped.";
+    }
+  </script>
+</body>
+</html>

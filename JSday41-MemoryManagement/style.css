@@ -1,0 +1,32 @@
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9fafc;
+      color: #222;
+    }
+    h1 {
+      color: #0077cc;
+    }
+    .btn-group button {
+      margin: 6px;
+      padding: 10px 16px;
+      border: none;
+      background: #0077cc;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn-group button:hover {
+      background: #005fa3;
+    }
+    .log {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 12px;
+      height: 250px;
+      overflow-y: auto;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      border: 1px solid #ddd;
+    }

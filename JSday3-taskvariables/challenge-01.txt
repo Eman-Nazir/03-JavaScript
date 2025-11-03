@@ -1,0 +1,170 @@
+<============== Task 01 goes here  ================>
+1. Calculate Average of Three Numbers
+Your tasks:
+
+Store three numbers in variables num1, num2, and num3.
+
+Calculate the average of the three numbers using the formula:
+
+Average = value 1 + value 2 + value 3  /  3
+
+Print the result.
+
+
+<============== Task 01 goes here  ================>
+2. Calculate Speed
+Your tasks:
+
+Store a distance (in kilometers) and time (in hours) in variables distance and time.
+
+Calculate the speed using the formula:
+
+Speed = distance / time
+
+Print the result.
+
+Test data:
+
+Data 1: distance = 150 km, time = 2 hours
+Data 2: distance = 100 km, time = 1.5 hours
+
+
+
+
+<============== Task 03 goes here  ================>
+3. Total Price of Multiple Items
+Your tasks:
+
+Store the prices of three items in variables price1, price2, and price3.
+Calculate the total price by adding the three prices.
+Print the result.
+Test data:
+
+Data 1: price1 = 25, price2 = 35, price3 = 15
+Data 2: price1 = 50, price2 = 20, price3 = 30
+
+
+<============== Task 04 goes here  ================>
+4. Compare Average Heights
+Your tasks:
+
+Store the heights (in meters) of two people in variables height1 and height2.
+
+Calculate their average height using the formula:
+
+Average Height = height1 + height2 / 2
+
+Print the result.
+
+Test data:
+
+Data 1: height1 = 1.75 meters, height2 = 1.80 meters
+Data 2: height1 = 1.65 meters, height2 = 1.70 meters
+
+
+<============== Task 05 goes here  ================>
+
+5. Find Time Taken to Cover Distance
+Your tasks:
+
+Store the speed (in km/h) and distance (in km) in variables speed and distance.
+
+Calculate the time taken to cover the distance using the formula:
+
+Time = distance / speed
+
+Print the result.
+
+Test data:
+
+Data 1: speed = 60 km/h, distance = 120 km
+Data 2: speed = 80 km/h, distance = 160 km
+
+
+
+<============== Task 06 goes here  ================>
+
+Check if a Number is Positive or Negative
+Your tasks:
+
+Store a number in a variable num.
+Use an if...else statement to check if the number is positive or negative.
+Print "Positive" if the number is greater than zero, and "Negative" if it is less than zero.
+Test data:
+
+Data 1: num = 5
+Data 2: num = -3
+
+
+<============== Task 07 goes here  ================>
+Check if a Number is Even or Odd
+Your tasks:
+
+Store a number in a variable number.
+Use the modulus operator (%) to check if the number is even or odd.
+Use an if...else statement to print "Even" if the number is even, and "Odd" if it is odd.
+Test data:
+
+Data 1: number = 12
+Data 2: number = 7
+
+
+<============== Task 08 goes here  ================>
+Calculate and Compare Two BMIs
+Your tasks:
+
+Store the mass and height for two individuals (Person A and Person B) in variables.
+
+Calculate their BMIs using the formula:
+
+BMI = mass / height ** 2
+
+Use an if...else statement to print whether Person A has a higher, lower, or equal BMI compared to Person B.
+
+Test data:
+
+Data 1: Person A (mass = 68 kg, height = 1.75 m), Person B (mass = 85 kg, height = 1.80 m)
+Data 2: Person A (mass = 72 kg, height = 1.60 m), Person B (mass = 72 kg, height = 1.70 m)
+
+
+<============== Task 09 goes here  ================>
+
+What is if else and elseif in js? (self learning)
+
+Grade Calculator
+Your tasks:
+
+Store a student's score in a variable score.
+Use an if...else statement to assign a grade based on the score:
+If the score is 90 or above, print "Grade A".
+If the score is between 80 and 89, print "Grade B".
+If the score is between 70 and 79, print "Grade C".
+Otherwise, print "Grade D".
+Test data:
+
+Data 1: score = 85
+Data 2: score = 65
+
+
+6. Check Voting Eligibility
+Your tasks:
+
+Store a person's age in a variable age.
+Use an if...else statement to check if the person is eligible to vote (must be 18 years or older).
+Print "Eligible to vote" if the age is 18 or above, otherwise print "Not eligible to vote".
+Test data:
+
+Data 1: age = 20
+Data 2: age = 16
+
+<============== Task 10 goes here  ================>
+Check if a Triangle is Valid
+Your tasks:
+
+Store the three angles of a triangle in variables angle1, angle2, and angle3.
+Use an if...else statement to check if the sum of the angles equals 180 degrees (which means it is a valid triangle).
+Print "Valid Triangle" if the angles form a valid triangle, otherwise print "Invalid Triangle".
+Test data:
+
+Data 1: angle1 = 60, angle2 = 60, angle3 = 60
+Data 2: angle1 = 90, angle2 = 45, angle3 = 50

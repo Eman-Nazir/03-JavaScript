@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let x = 10;
+if (true) {
+let x = 20;
+console.log(x);
+
+}
+console.log(x);
+
+
+
+
+
+function performAction(action) {
+  action();
+}
+
+function sayHello() {
+  console.log("Hello!");
+}
+
+performAction(sayHello);
+
+
+// setTimeout(function() {
+//   alert("This is a delayed message!");
+// }, 2000);
+
+
+
+let person = { name: "John", age: 30 };
+console.log(Object.keys(person))
+
+let person2 = { name: "John", age: 30 };
+console.log(Object.values(person2))
+
+
+const book = {
+  title: "JavaScript Basics",
+  author: "John Doe",
+  printDetails: function() {
+    console.log(`Title: ${this.title}`);
+    console.log(`Author: ${this.author}`);
+  }
+};
+
+// Calling the method in the object
+book.printDetails(); 
+
+
+
+function isEven (num){
+    if (num % 2 == 0 ){
+        return    "EVEN" ;
+    }else{
+        return "ODD" ;
+    }
+}
+   console.log(isEven(40));
+
+
+
+
+// function getData(callback) {
+//   setTimeout(() => {
+//     const data = 'Hello, World!';
+//     callback(data);
+//   }, 2000);
+// }
+
+// getData((message) => {
+//   console.log(message); // Outputs 'Hello, World!' after 2 seconds
+// });
+
+
+const numbers = [1, 2, 3, 4];
+
+
+function doubleNumbers(numbers, callback) {
+  for (let i = 0; i < numbers.length; i++) {
+    callback(numbers[i] * 2);
+  }
+}
+
+doubleNumbers(numbers, (number) => {
+  console.log(number); // Output: 2, 4, 6, 8
+});
+
+
+
+
+
+const interval = setInterval(() => {
+  console.log('Repeating message');
+}, 2000);
+
+setTimeout(() => {
+  clearInterval(interval);
+}, 10000); // Stops after 10 seconds
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

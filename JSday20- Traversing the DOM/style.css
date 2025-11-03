@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .button-style {
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color:  purple;
+    background-color: purple;
+    cursor: pointer;
+    font-size: larger;
+  }
+  
+  .check-base-styles {
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 999999px;
+    background-color: azure;
+    color: purple;
+    cursor: pointer;
+    border: 0.2rem solid purple;
+  }
+  
+  .active-check-styles {
+    color: azure;
+    background-color: purple;
+  }
+
+
+
+  

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods Examples</title>
+</head>
+<body>
+
+  <h1>Pop Method Examples</h1>
+
+  <script>
+
+
+    // let numbersPop = [1, 3, 5, 7, 9];
+    // for (let i = 0; i < 10; i++) {
+    //   if (numbersPop.length > 0) {
+    //     numbersPop.pop();
+    //   }
+    // }
+    // console.log('Pop Result:', numbersPop); 
+
+    // // Example 2
+    // // agar condition true ho jaye gii tu 1 element remove ho ga 
+
+    // let numbersPop2 = [2, 4, 6, 8];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersPop2.pop();
+    // }
+    // console.log('Pop Result 2:', numbersPop2); 
+
+    // // Example 3
+    // let numbersPop3 = [10, 20, 30, 40];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersPop3.pop();
+    // }
+    // console.log('Pop Result 3:', numbersPop3);
+
+    // // Example 4
+    // let numbersPop4 = [100, 200, 300];
+    // for (let i = 0; i < 4; i++) {
+    //   numbersPop4.pop();
+    // }
+    // console.log('Pop Result 4:', numbersPop4); 
+
+    // // Example 5
+    // let numbersPop5 = [5, 10, 15, 20];
+    // for (let i = 0; i < 5; i++) {
+    //   numbersPop5.pop();
+    // }
+    // console.log('Pop Result 5:', numbersPop5); 
+
+    // // Example 6
+    // let numbersPop6 = [1, 2, 3, 4, 5];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersPop6.pop();
+    // }
+    // console.log('Pop Result 6:', numbersPop6); 
+
+    // // Example 7
+    // let numbersPop7 = [11, 12, 13, 14, 15];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersPop7.pop();
+    // }
+    // console.log('Pop Result 7:', numbersPop7); 
+
+    // // Example 8
+    // let numbersPop8 = [1000, 2000, 3000, 4000];
+    // for (let i = 0; i < 4; i++) {
+    //   numbersPop8.pop();
+    // }
+    // console.log('Pop Result 8:', numbersPop8); 
+
+    // // Example 9
+    // let numbersPop9 = [50, 100, 150, 200];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersPop9.pop();
+    // }
+    // console.log('Pop Result 9:', numbersPop9); 
+
+    // // Example 10
+    // let numbersPop10 = [1, 2, 3, 4, 5, 6];
+    // for (let i = 0; i < 6; i++) {
+    //   numbersPop10.pop();
+    // }
+    // console.log('Pop Result 10:', numbersPop10); 
+
+
+  
+    // let numbersPush = [1, 3, 5];
+    // for (let i = 0; i < 10; i++) {
+    //   numbersPush.push(i);
+    // }
+    // console.log('Push Result 1:', numbersPush); 
+
+    // // Example 2
+    // let numbersPush2 = [2, 4];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersPush2.push(i);
+    // }
+    // console.log('Push Result 2:', numbersPush2); 
+
+    // // Example 3
+    // let numbersPush3 = [100];
+    // for (let i = 0; i < 5; i++) {
+    //   numbersPush3.push(i);
+    // }
+    // console.log('Push Result 3:', numbersPush3);
+
+    // // Example 4
+    // let numbersPush4 = [10, 20];
+    // for (let i = 0; i < 4; i++) {
+    //   numbersPush4.push(i);
+    // }
+    // console.log('Push Result 4:', numbersPush4); 
+
+    // // Example 5
+    // let numbersPush5 = [0, 2];
+    // for (let i = 0; i < 6; i++) {
+    //   numbersPush5.push(i);
+    // }
+    // console.log('Push Result 5:', numbersPush5); 
+
+    // // Example 6
+    // let numbersPush6 = [50, 60];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersPush6.push(i);
+    // }
+    // console.log('Push Result 6:', numbersPush6); 
+
+    // // Example 7
+    // let numbersPush7 = [7, 8, 9];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersPush7.push(i);
+    // }
+    // console.log('Push Result 7:', numbersPush7); 
+
+    // // Example 8
+    // let numbersPush8 = [100, 200];
+    // for (let i = 0; i < 4; i++) {
+    //   numbersPush8.push(i);
+    // }
+    // console.log('Push Result 8:', numbersPush8); 
+
+    // // Example 9
+    // let numbersPush9 = [11, 12, 13];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersPush9.push(i);
+    // }
+    // console.log('Push Result 9:', numbersPush9); 
+
+    // // Example 10
+    // let numbersPush10 = [9];
+    // for (let i = 0; i < 5; i++) {
+    //   numbersPush10.push(i);
+    // }
+    // console.log('Push Result 10:', numbersPush10); 
+  
+
+ 
+    // let numbersShift = [1, 2, 3, 4];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersShift.shift();
+    // }
+    // console.log('Shift Result 1:', numbersShift); 
+
+    // // Example 2
+    // let numbersShift2 = [10, 20, 30];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersShift2.shift();
+    // }
+    // console.log('Shift Result 2:', numbersShift2); 
+
+    // // Example 3
+    // let numbersShift3 = [50, 60, 70, 80];
+    // for (let i = 0; i < 4; i++) {
+    //   numbersShift3.shift();
+    // }
+    // console.log('Shift Result 3:', numbersShift3); // Output: []
+
+    // // Example 4
+    // let numbersShift4 = [2, 4, 6, 8];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersShift4.shift();
+    // }
+    // console.log('Shift Result 4:', numbersShift4); // Output: [8]
+
+    // // Example 5
+    // let numbersShift5 = [10, 15, 20, 25];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersShift5.shift();
+    // }
+    // console.log('Shift Result 5:', numbersShift5); // Output: [20, 25]
+
+    // // Example 6
+    // let numbersShift6 = [1, 2, 3];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersShift6.shift();
+    // }
+    // console.log('Shift Result 6:', numbersShift6); // Output: []
+
+    // // Example 7
+    // let numbersShift7 = [5, 10, 15];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersShift7.shift();
+    // }
+    // console.log('Shift Result 7:', numbersShift7); // Output: [15]
+
+    // // Example 8
+    // let numbersShift8 = [100, 200, 300];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersShift8.shift();
+    // }
+    // console.log('Shift Result 8:', numbersShift8); // Output: []
+
+    // // Example 9
+    // let numbersShift9 = [7, 14, 21];
+    // for (let i = 0; i < 1; i++) {
+    //   numbersShift9.shift();
+    // }
+    // console.log('Shift Result 9:', numbersShift9); // Output: [14, 21]
+
+    // // Example 10
+    // let numbersShift10 = [5, 10, 15, 20];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersShift10.shift();
+    // }
+    // console.log('Shift Result 10:', numbersShift10); // Output: [15, 20]
+  
+
+    // let numbersUnshift = [3, 4, 5];
+    // for (let i = 0; i < 3; i++) {
+    //   numbersUnshift.unshift(i);
+    // }
+    // console.log('Unshift Result:', numbersUnshift); // Output: [2, 1, 0, 3, 4, 5]
+
+    // // Example 2
+    // let numbersUnshift2 = [5, 6, 7];
+    // for (let i = 0; i < 4; i++) {
+    //   numbersUnshift2.unshift(i);
+    // }
+    // console.log('Unshift Result 2:', numbersUnshift2); // Output: [3, 2, 1, 0, 5, 6, 7]
+
+    // // Example 3
+    // let numbersUnshift3 = [9, 10];
+    // for (let i = 0; i < 2; i++) {
+    //   numbersUnshift3.unshift(i);
+    // }
+    // console.log('Unshift Result 3:', numbersUnshift3); // Output: [1, 0, 9, 10]
+
+    // Example 4
+//     let numbersUnshift4 = [20, 30];
+//     for (let i = 0; i < 5; i++) {
+//       numbersUnshift4.unshift(i);
+//     }
+//     console.log('Unshift Result 4:', numbersUnshift4); // Output: [4, 3, 2, 1, 0, 20, 30]
+
+//     // Example 5
+//     let numbersUnshift5 = [12, 13];
+//     for (let i = 0; i < 6; i++) {
+//       numbersUnshift5.unshift(i);
+//     }
+//     console.log('Unshift Result 5:', numbersUnshift5); // Output: [5, 4, 3, 2, 1, 0, 12, 13]
+
+//     // Example 6
+//     let numbersUnshift6 = [0, 1];
+//     for (let i = 0; i < 3; i++) {
+//       numbersUnshift6.unshift(i);
+//     }
+//     console.log('Unshift Result 6:', numbersUnshift6); // Output: [2, 1, 0, 0, 1]
+
+//     // Example 7
+//     let numbersUnshift7 = [50, 60];
+//     for (let i = 0; i < 2; i++) {
+//       numbersUnshift7.unshift(i);
+//     }
+//     console.log('Unshift Result 7:', numbersUnshift7); // Output: [1, 0, 50, 60]
+
+//     // Example 8
+//     let numbersUnshift8 = [10, 20, 30];
+//     for (let i = 0; i < 4; i++) {
+//       numbersUnshift8.unshift(i);
+//     }
+//     console.log('Unshift Result 8:', numbersUnshift8); // Output: [3, 2, 1, 0, 10, 20, 30]
+
+//     // Example 9
+//     let numbersUnshift9 = [4, 5];
+//     for (let i = 0; i < 2; i++) {
+//       numbersUnshift9.unshift(i);
+//     }
+//     console.log('Unshift Result 9:', numbersUnshift9); // Output: [1, 0, 4, 5]
+
+//     // Example 10
+//     let numbersUnshift10 = [6, 7, 8];
+//     for (let i = 0; i < 1; i++) {
+//       numbersUnshift10.unshift(9);
+//     }
+//     console.log('Unshift Result 10:', numbersUnshift10); // Output: [9, 6, 7, 8]
+
+
+
+
+
+// // 3. Pushing objects to an array
+// let employees = [];
+// employees.push({ name: 'John', age: 30 });
+// employees.push({ name: 'Sarah', age: 25 });
+// console.log('Example 3:', employees);  
+// // [{ name: 'John', age: 30 }, { name: 'Sarah', age: 25 }]
+
+// // 4. Pushing a new array to an array
+// let moreNumbers = [1, 2, 3];
+// let newNumbers = [4, 5];
+// moreNumbers.push(newNumbers);
+// console.log('Example 4:', moreNumbers);  // [1, 2, 3, [4, 5]]
+
+// // 5. Pushing a value to an empty array
+// let animals = [];
+// animals.push('cat');
+// console.log('Example 5:', animals);  // ['cat']
+
+// // 6. Pushing a result of an operation
+// let result = [];
+// let x = 5;
+// let y = 10;
+// result.push(x + y);
+// console.log('Example 6:', result);  // [15]
+
+// // 7. Pushing values inside a loop
+// let squares = [];
+// for (let i = 1; i <= 5; i++) {
+//   squares.push(i * i);
+// }
+// console.log('Example 7:', squares);  // [1, 4, 9, 16, 25]
+
+// // 8. Using .push() to combine two arrays
+// let firstArray = [1, 2, 3];
+// let secondArray = [4, 5];
+// firstArray.push(...secondArray);
+// console.log('Example 8:', firstArray);  // [1, 2, 3, 4, 5]
+
+// // 9. Pushing elements into an array based on a condition
+// let evenNumbers = [];
+// for (let i = 1; i <= 10; i++) {
+//   if (i % 2 === 0) {
+//     evenNumbers.push(i);  // Add even numbers to the array
+//   }
+// }
+// console.log('Example 9:', evenNumbers);  // [2, 4, 6, 8, 10]
+
+// ***************** FUNNCTIONS 
+// Examples for Array Methods: pop, push, shift, unshift
+
+// Example functions for `pop`
+
+
+function popExample1() {
+    let arr = [1, 2, 3];
+    arr.pop();
+console.log(arr); // [1, 2]
+
+}
+popExample1()
+
+function popExample2() {
+    let arr = ["a", "b", "c", "d"];
+    let removed = arr.pop();
+    console.log(removed); // "d"
+    console.log(arr); // ["a", "b", "c"]
+}
+popExample2()
+
+
+function popExample3() {
+    let arr = [];
+    arr.pop(); // Empty array, no effect
+    console.log(arr); // []
+}
+popExample3()
+
+function popExample4() {
+    let arr = [5, 10, 15];
+    while (arr.length > 0) {
+        console.log(arr.pop());
+    }
+    // Logs: 15, 10, 5
+}
+popExample4()
+
+function popExample5() {
+    let arr = ["x", "y", "z"];
+    arr.pop();
+    arr.pop();
+    console.log(arr); // ["x"]
+}
+popExample5()
+
+
+function popExample6() {
+    let arr = [1, 2, 3, 4, 5];
+    arr.pop();
+    console.log(arr[arr.length - 1]); // 4
+}
+popExample6()
+
+function popExample7() {
+    let arr = new Array(3).fill("hello");
+    arr.pop();
+    console.log(arr); // ["hello", "hello"]
+}
+popExample7()
+
+function popExample8() {
+    let arr = [1, 2, 3, 4];
+    arr.pop();
+    console.log(arr.join("-")); // "1-2-3"
+}
+popExample8()
+
+function popExample9() {
+    let arr = [10, 20, 30, 40];
+    let last = arr.pop();
+    console.log(last * 2); // 80
+}
+popExample9()
+
+
+function popExample10() {
+    let arr = [10];
+    arr.pop();
+    arr.pop(); // Does nothing; no error
+    console.log(arr); // []
+}
+popExample10()
+
+// Example functions for `push`
+function pushExample1() {
+    let arr = [1, 2];
+    arr.push(3);
+    console.log(arr); // [1, 2, 3]
+}
+
+function pushExample2() {
+    let arr = [];
+    arr.push("a", "b", "c");
+    console.log(arr); // ["a", "b", "c"]
+}
+
+function pushExample3() {
+    let arr = [5];
+    arr.push(arr.length);
+    console.log(arr); // [5, 1]
+}
+
+function pushExample4() {
+    let arr = ["apple"];
+    arr.push("banana", "cherry");
+    console.log(arr); // ["apple", "banana", "cherry"]
+}
+
+function pushExample5() {
+    let arr = [];
+    for (let i = 1; i <= 5; i++) {
+        arr.push(i * i);
+    }
+    console.log(arr); // [1, 4, 9, 16, 25]
+}
+
+function pushExample6() {
+    let arr = ["x", "y"];
+    arr.push(...["a", "b", "c"]);
+    console.log(arr); // ["x", "y", "a", "b", "c"]
+}
+
+function pushExample7() {
+    let arr = [];
+    let result = arr.push("item");
+    console.log(result); // 1
+    console.log(arr); // ["item"]
+}
+
+function pushExample8() {
+    let arr = ["start"];
+    arr.push();
+    console.log(arr); // ["start"]
+}
+
+function pushExample9() {
+    let arr = [true, false];
+    arr.push(arr.pop());
+    console.log(arr); // [true, false]
+}
+
+function pushExample10() {
+    let arr = [1];
+    arr.push(arr[0] + 5);
+    console.log(arr); // [1, 6]
+}
+
+
+pushExample1()
+pushExample2()
+pushExample3()
+pushExample4()
+pushExample5()
+pushExample6()
+pushExample7()
+pushExample8()
+pushExample9()
+pushExample10()
+
+
+
+// Example functions for `shift`
+function shiftExample1() {
+    let arr = [1, 2, 3];
+    arr.shift();
+    console.log(arr); // [2, 3]
+}
+
+function shiftExample2() {
+    let arr = ["a", "b", "c"];
+    let removed = arr.shift();
+    console.log(removed); // "a"
+}
+
+function shiftExample3() {
+    let arr = [];
+    arr.shift();
+    console.log(arr); // []
+}
+
+function shiftExample4() {
+    let arr = [10, 20, 30];
+    while (arr.length > 0) {
+        console.log(arr.shift());
+    }
+    // Logs: 10, 20, 30
+}
+
+function shiftExample5() {
+    let arr = ["apple", "banana"];
+    arr.shift();
+    arr.shift();
+    console.log(arr); // []
+}
+
+function shiftExample6() {
+    let arr = [5, 10, 15];
+    console.log(arr.shift() * 2); // 10
+}
+
+function shiftExample7() {
+    let arr = ["x", "y", "z"];
+    console.log(arr.shift().toUpperCase()); // "X"
+}
+
+function shiftExample8() {
+    let arr = ["hello", "world"];
+    arr.shift();
+    arr.push("!");
+    console.log(arr); // ["world", "!"]
+}
+
+function shiftExample9() {
+    let arr = [1];
+    arr.shift();
+    console.log(arr); // []
+}
+
+function shiftExample10() {
+    let arr = [10, 20, 30];
+    arr.shift();
+    arr.shift();
+    console.log(arr.shift()); // 30
+}
+
+
+shiftExample1()
+shiftExample2()
+shiftExample3()
+shiftExample4()
+shiftExample5()
+shiftExample6()
+shiftExample7()
+shiftExample8()
+shiftExample9()
+shiftExample10()
+
+
+
+// Example functions for `unshift`
+function unshiftExample1() {
+    let arr = [2, 3];
+    arr.unshift(1);
+    console.log(arr); // [1, 2, 3]
+}
+
+function unshiftExample2() {
+    let arr = [];
+    arr.unshift("a", "b", "c");
+    console.log(arr); // ["a", "b", "c"]
+}
+
+function unshiftExample3() {
+    let arr = ["b"];
+    arr.unshift("a");
+    console.log(arr); // ["a", "b"]
+}
+
+function unshiftExample4() {
+    let arr = ["x", "y"];
+    arr.unshift(...["a", "b"]);
+    console.log(arr); // ["a", "b", "x", "y"]
+}
+
+function unshiftExample5() {
+    let arr = [10];
+    arr.unshift(arr[0] - 5);
+    console.log(arr); // [5, 10]
+}
+
+function unshiftExample6() {
+    let arr = ["world"];
+    arr.unshift("hello");
+    console.log(arr.join(" ")); // "hello world"
+}
+
+function unshiftExample7() {
+    let arr = [2, 3];
+    arr.unshift(arr.length);
+    console.log(arr); // [2, 2, 3]
+}
+
+function unshiftExample8() {
+    let arr = [1];
+    arr.unshift();
+    console.log(arr); 
+}
+
+
+function unshiftExample10() {
+    let arr = [true];
+    arr.unshift(false);
+    console.log(arr); // [false, true]
+}
+
+unshiftExample1()
+unshiftExample2()
+unshiftExample3()
+unshiftExample4()
+unshiftExample5()
+unshiftExample6()
+unshiftExample7()
+unshiftExample8()
+unshiftExample10()
+
+
+
+// Examples for Array Methods with HOF and Callbacks
+
+// POP Examples
+const popExamples = () => {
+    console.log("Examples for pop()");
+    // 1. Simple pop
+    const arr1 = [1, 2, 3, 4];
+    arr1.pop();
+    console.log(arr1);
+
+    // 2. Pop with callback
+    const arr2 = ["a", "b", "c", "d"];
+    const logPop = (array, callback) => callback(array.pop());
+    logPop(arr2, console.log);
+
+    // 3. Pop and count elements removed
+    const arr3 = [10, 20, 30, 40];
+    const removeAndCount = (array) => {
+        const removed = array.pop();
+        return { removed, count: array.length };
+    };
+    console.log(removeAndCount(arr3));
+
+    // 4. Pop and log with HOF
+    const arr4 = ["x", "y", "z"];
+    const performAction = (array, action) => action(array.pop());
+    performAction(arr4, (element) => console.log(`Removed: ${element}`));
+
+    // 5. Using pop inside filter
+    const arr5 = [1, 2, 3, 4, 5];
+    arr5.filter(() => arr5.pop());
+    console.log(arr5);
+
+    // 6. Pop till array is empty
+    const arr6 = [100, 200, 300];
+    while (arr6.length) {
+        console.log(arr6.pop());
+    }
+
+    // 7. Remove last element and multiply
+    const arr7 = [1, 2, 3, 4];
+    const multiplyLast = (array) => array.pop() * 10;
+    console.log(multiplyLast(arr7));
+
+    // 8. Custom pop using callback
+    const customPop = (array, cb) => cb(array.pop());
+    customPop(["a", "b", "c"], (item) => console.log(item + "!"));
+
+    // 9. Pop and return the popped element
+    const arr9 = ["apple", "banana", "cherry"];
+    const popped = arr9.pop();
+    console.log(`Popped element: ${popped}`);
+
+    // 10. Use pop to update another array
+    const source = [1, 2, 3];
+    const target = [];
+    while (source.length) target.push(source.pop());
+    console.log(target);
+};
+
+// PUSH Examples
+const pushExamples = () => {
+    console.log("Examples for push()");
+    // 1. Simple push
+    const arr1 = [];
+    arr1.push(10);
+    console.log(arr1);
+
+    // 2. Push with callback
+    const logPush = (array, value, callback) => {
+        array.push(value);
+        callback(value);
+    };
+    logPush([], 20, console.log);
+
+    // 3. Push and count elements
+    const arr3 = [];
+    const pushAndCount = (array, value) => {
+        array.push(value);
+        return array.length;
+    };
+    console.log(pushAndCount(arr3, 30));
+
+    // 4. Push multiple elements
+    const arr4 = [];
+    const addMultiple = (...values) => arr4.push(...values);
+    addMultiple(1, 2, 3);
+    console.log(arr4);
+
+    // 5. Push using a map callback
+    const arr5 = [];
+    [1, 2, 3].map((num) => arr5.push(num * 2));
+    console.log(arr5);
+
+    // 6. Push even numbers only
+    const arr6 = [];
+    [1, 2, 3, 4, 5].forEach((num) => num % 2 === 0 && arr6.push(num));
+    console.log(arr6);
+
+    // 7. Push using HOF
+    const addWithLog = (array, value) => array.push(value) && console.log(array);
+    addWithLog([], "test");
+
+    // 8. Push return values from callback
+    const arr8 = [];
+    [5, 10, 15].forEach((num) => arr8.push(num * 3));
+    console.log(arr8);
+
+    // 9. Add and sort
+    const arr9 = [3, 1];
+    arr9.push(2);
+    console.log(arr9.sort());
+
+    // 10. Push and pop
+    const arr10 = [];
+    arr10.push(1, 2);
+    console.log(arr10.pop());
+};
+
+// SHIFT Examples
+const shiftExamples = () => {
+    console.log("Examples for shift()");
+    // 1. Simple shift
+    const arr1 = [1, 2, 3];
+    arr1.shift();
+    console.log(arr1);
+
+    // 2. Shift and log
+    const arr2 = ["first", "second"];
+    const logShift = (array) => console.log(array.shift());
+    logShift(arr2);
+
+    // 3. Shift with a condition
+    const arr3 = [10, 20, 30];
+    const shiftIfGreaterThan = (array, value) =>
+        array[0] > value ? array.shift() : null;
+    console.log(shiftIfGreaterThan(arr3, 15));
+
+    // 4. Shift till empty
+    const arr4 = ["a", "b", "c"];
+    while (arr4.length) console.log(arr4.shift());
+
+    // 5. Use shift in filter
+    const arr5 = [1, 2, 3, 4];
+    arr5.filter(() => arr5.shift());
+    console.log(arr5);
+
+    // 6. Shift and add to another array
+    const arr6 = [10, 20, 30];
+    const newArr6 = [];
+    while (arr6.length) newArr6.push(arr6.shift());
+    console.log(newArr6);
+
+    // 7. Use shift with map
+    const arr7 = [5, 10, 15];
+    arr7.map(() => arr7.shift());
+    console.log(arr7);
+
+    // 8. Shift and double
+    const arr8 = [1, 2, 3];
+    const doubleFirst = (array) => array.shift() * 2;
+    console.log(doubleFirst(arr8));
+
+    // 9. Shift using HOF
+    const shiftLog = (array, action) => action(array.shift());
+    shiftLog(["alpha", "beta"], console.log);
+
+    // 10. Custom shift implementation
+    const customShift = (array, callback) => {
+        const removed = array.shift();
+        callback(removed);
+    };
+    customShift([100, 200, 300], console.log);
+};
+
+// UNSHIFT Examples
+const unshiftExamples = () => {
+    console.log("Examples for unshift()");
+    // 1. Simple unshift
+    const arr1 = [];
+    arr1.unshift(1);
+    console.log(arr1);
+
+    // 2. Unshift with callback
+    const logUnshift = (array, value, callback) => {
+        array.unshift(value);
+        callback(value);
+    };
+    logUnshift([], 5, console.log);
+
+    // 3. Unshift multiple elements
+    const arr3 = [4];
+    arr3.unshift(1, 2, 3);
+    console.log(arr3);
+
+    // 4. Unshift and check length
+    const arr4 = [];
+    console.log(arr4.unshift(10));
+
+    // 5. Unshift with HOF
+    const arr5 = [];
+    const addAndLog = (array, value) => array.unshift(value) && console.log(array);
+    addAndLog(arr5, 20);
+
+    // 6. Add elements from another array
+    const arr6 = [];
+    [3, 2, 1].forEach((num) => arr6.unshift(num));
+    console.log(arr6);
+
+    // 7. Add and sort
+    const arr7 = [5];
+    arr7.unshift(2, 4);
+    console.log(arr7.sort());
+
+    // 8. Add based on condition
+    const arr8 = [];
+    const addIfOdd = (value) => value % 2 !== 0 && arr8.unshift(value);
+    [1, 2, 3, 4, 5].forEach(addIfOdd);
+    console.log(arr8);
+
+    // 9. Unshift and calculate
+    const arr9 = [];
+    arr9.unshift(10);
+    arr9.unshift(20);
+    console.log(arr9.reduce((a, b) => a + b));
+
+    // 10. Add with a callback
+    const addAndCallback = (array, value, callback) => {
+        array.unshift(value);
+        callback(array);
+    };
+    addAndCallback([], 50, console.log);
+};
+
+// Run all examples
+popExamples();
+pushExamples();
+shiftExamples();
+unshiftExamples();
+
+  </script>
+
+</body>
+</html>

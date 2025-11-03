@@ -1,0 +1,254 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dial Pad</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body, html {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .display-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+        padding: 1rem;
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        border: 1px solid #ccc;
+      }
+
+      .display {
+        font-size: 1.8rem;
+        flex-grow: 1;
+        text-align: left;
+        padding-right: 1rem;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .cancel-btn {
+        background-color: crimson;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .dial-pad {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 250px;
+      }
+
+      .dial-pad button {
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: azure;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 30%;
+        margin-bottom: 0.7rem;
+        cursor: pointer;
+      }
+
+   
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display-container">
+        <div id="display" class="display"></div>
+        <button id="cancel" class="cancel-btn">Cancel</button>
+      </div>
+      <div id="dialPad" class="dial-pad"></div>
+    </div>
+
+    <script>
+      const display = document.getElementById('display');
+      const cancelBtn = document.getElementById('cancel');
+      const dialPad = document.getElementById('dialPad');
+
+      // Button values for the dial pad
+      const buttons = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#'];
+
+      // Dynamically create dial pad buttons using JavaScript
+      buttons.forEach(value => {
+        const button = document.createElement('button');
+        button.textContent = value;
+        dialPad.appendChild(button);
+
+        // Add event listener for each button
+        button.addEventListener('click', function() {
+          if (display.textContent.length < 10) {
+            display.textContent += value;
+          }
+        });
+      });
+
+      // Add event listener for the cancel button
+      cancelBtn.addEventListener('click', function() {
+        display.textContent = display.textContent.slice(0, -1); // Remove last character
+      });
+    </script>
+  </body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dial Pad</title>
+
+  
+   <style>
+
+      * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-weight: 800;
+      }
+
+      main {
+          min-width: 100vw;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      section {
+          width: 420px;
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          background-color: #020202;
+          border-radius: 0.2rem;
+          border: 0.2rem solid black;
+      }
+
+      button {
+          padding: 20px 0;
+          border: none;
+          outline: none;
+          background-color: azure;
+          cursor: pointer;
+          font-size: larger;
+          flex-grow: 1;
+          min-width: 30%;
+      }
+
+      #picker {
+          padding: 1rem 2rem;
+          font-size: large;
+          border-radius: 0.5rem;
+          box-shadow: 2px 2px 5px black;
+          cursor: pointer;
+          margin-bottom: 1rem;
+          width: 420px;
+          text-align: center;
+      }
+
+      .cancel-btn {
+          padding: 10px 20px;
+          font-size: medium;
+          border-radius: 0.5rem;
+          background-color: red;
+          color: white;
+          cursor: pointer;
+          margin-top: 0.5rem;
+      }
+    
+</style>
+</head>
+
+<body>
+  <main id="root"></main>
+  
+</body>
+
+<script>
+
+
+    const main = document.getElementById("root");
+
+    const container = document.createElement("div");
+    container.className = "container";
+
+    const section = document.createElement("section");
+
+    let newDiv = document.createElement("div");
+    newDiv.id = "picker";
+
+    const cancelButton = document.createElement("button");
+    cancelButton.className = "cancel-btn";
+    cancelButton.textContent = "Cancel";
+
+    container.appendChild(newDiv);
+    container.appendChild(section);
+    main.appendChild(container);
+    container.appendChild(cancelButton);
+
+
+    const padButtonText = "123456789*0#";
+
+    for (let char of padButtonText) {
+      const button = document.createElement("button");
+      button.textContent = char;
+
+      button.addEventListener("click", function () {
+        newDiv.innerText += char; 
+      });
+
+      section.appendChild(button);
+    }
+
+    cancelButton.onclick = function () {
+      newDiv.innerText = newDiv.innerText.slice(0, -1); 
+    };
+  </script>
+
+</html>

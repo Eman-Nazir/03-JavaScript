@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Handling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="root">
+    <section>
+      <form id="userForm">
+        <div class="input-group">
+          <label for="username">Enter your name here:</label>
+          <input type="text" id="username" name="username" placeholder="Enter your name here" required>
+        </div>
+        <div class="input-group">
+          <label for="age">Enter your age here:</label>
+          <input type="number" id="age" name="age" placeholder="Enter your age here" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Enter your email here:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email here" required>
+        </div>
+        <div class="input-group">
+          <label>Select your gender:</label>
+          <div>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

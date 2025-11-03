@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Data Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Users List</h1>
+  <table id="usersTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    const url = "https://jsonplaceholder.typicode.com/users";
+
+    fetch(url)
+      .then((response)=> {
+        return response.json();
+      }).then((data) => {
+        console.log(data)
+        const tableBody = document.querySelector("#usersTable tbody");
+        data.forEach((user) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.address.street}, ${user.address.city}</td>
+          `;
+
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(function(error) {
+        console.log("An error occurred:", error);
+      });
+  </script>
+</body>
+</html>
