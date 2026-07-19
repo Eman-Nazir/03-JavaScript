@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/DOM-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/Async%2FAwait-000000?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
-  <img src="https://img.shields.io/badge/OOP-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  
 </p>
 
 <p align="center">
